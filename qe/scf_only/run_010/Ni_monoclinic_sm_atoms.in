@@ -1,0 +1,51 @@
+&CONTROL
+  calculation  =  "scf", 
+  etot_conv_thr  =  1.000000000000D-05, 
+  forc_conv_thr  =  1.000000000000D-04, 
+  tprnfor  =  .true., 
+  outdir  =  "./out", 
+  tstress  =  .true., 
+/
+
+&SYSTEM
+  ecutwfc  =  8.000000000000D+01, 
+  ecutrho  =  3.200000000000D+02, 
+  ibrav  =  0, 
+  nosym  =  .true., 
+  nat  =  1, 
+  ntyp  =  1, 
+  nspin  =  2, 
+  occupations  =  "smearing", 
+  smearing  =  "mv", 
+  degauss  =  1.000000000000D-02, 
+  starting_magnetization(1)  =  7.000000000000D-01, 
+/
+
+&ELECTRONS
+  mixing_mode  =  "TF", 
+  conv_thr  =  1.000000000000D-09, 
+/
+
+&IONS
+  ion_dynamics  =  "bfgs", 
+  upscale  =  1000, 
+/
+
+&CELL
+  cell_dofree  =  "all", 
+  cell_dynamics  =  "bfgs", 
+/
+
+ATOMIC_SPECIES
+  Ni  58.693400000000  Ni.upf
+
+ATOMIC_POSITIONS crystal
+  Ni    0.000000000000   0.000000000000   0.000000000000  1   1   1
+
+CELL_PARAMETERS bohr
+  2.581649159326  0.000000000000  0.000000000000
+  0.000000000000  2.151377448982  0.000000000000
+  -0.956560043131  0.000000000000  2.628127118856
+
+K_POINTS automatic 
+  10  12  9    0  0  0

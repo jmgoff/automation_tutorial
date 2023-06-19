@@ -1,0 +1,43 @@
+&control
+calculation = 'scf',
+prefix = 'gold',
+pseudo_dir = './',
+outdir = './',
+tprnfor = .true.,
+tstress = .true.
+/
+&system
+ibrav =0,
+nosym = .true. ,
+celldm(1) = 7.867755882,
+nat =4,
+ntyp = 1,
+ecutwfc =50,
+occupations = 'smearing',
+smearing = 'gaussian',
+degauss = 0.02
+/
+&electrons
+conv_thr = 1.0d-9,
+/
+&ions
+/
+&cell
+/
+ATOMIC_SPECIES
+Au 196.96657 Au.pbe-n-kjpaw_psl.1.0.0.UPF
+ATOMIC_POSITIONS  
+Au 0.05 0.05 0.05 
+Au 0.00 0.25 0.25
+Au 0.25 0.00 0.25
+Au 0.25 0.25 0.00
+
+
+K_POINTS automatic
+30 30 30 0 0 0
+CELL_PARAMETERS
+-0.499 0.00 0.49862
+0.00 0.4989 0.517
+-0.50 0.50 0.00
+
+

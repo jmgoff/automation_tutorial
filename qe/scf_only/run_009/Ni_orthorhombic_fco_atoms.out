@@ -1,0 +1,306 @@
+Ignoring PCI device with non-16bit domain.
+Pass --enable-32bits-pci-domain to configure to support such devices
+(warning: it would break the library ABI, don't enable unless really needed).
+
+     Program PWSCF v.7.1 starts on 18Jun2023 at 11:38:47 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on    24 processors
+
+     MPI processes distributed on     1 nodes
+     9609 MiB available memory on the printing compute node when the environment starts
+
+     Reading input from Ni_orthorhombic_fco_atoms.in
+Warning: card &CELL ignored
+Warning: card   CELL_DOFREE  =  "ALL", ignored
+Warning: card   CELL_DYNAMICS  =  "BFGS", ignored
+Warning: card / ignored
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  4
+
+     K-points division:     npool     =       4
+     R & G space division:  proc/nbgrp/npool/nimage =       6
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     a serial algorithm will be used
+
+
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min          19      19      9                  135      135      45
+     Max          20      20     10                  136      136      46
+     Sum         117     117     57                  813      813     273
+
+     Using Slab Decomposition
+
+
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =       2.4687  a.u.
+     unit-cell volume          =       8.4766 (a.u.)^3
+     number of atoms/cell      =            1
+     number of atomic types    =            1
+     number of electrons       =        18.00
+     number of Kohn-Sham states=           13
+     kinetic-energy cutoff     =      80.0000  Ry
+     charge density cutoff     =     320.0000  Ry
+     scf convergence threshold =      1.0E-09
+     mixing beta               =       0.7000
+     number of iterations used =            8  TF        mixing
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+
+     celldm(1)=   2.468662  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   1.000000   0.000000   0.000000 )  
+               a(2) = (   0.539934   0.753586   0.000000 )  
+               a(3) = (   0.460066   0.094328   0.747664 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  1.000000 -0.716487 -0.524943 )  
+               b(2) = (  0.000000  1.326989 -0.167418 )  
+               b(3) = (  0.000000  0.000000  1.337500 )  
+
+
+     PseudoPot. # 1 for Ni read from file:
+     /home/jmgoff/work/automation/qe_pseudos/Ni.upf
+     MD5 check sum: 2b0a79d100e227970886d6963e34175b
+     Pseudo is Norm-conserving + core correction, Zval = 18.0
+     Generated using ONCVPSP code by D. R. Hamann
+     Using radial grid of 1372 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+
+     atomic species   valence    mass     pseudopotential
+        Ni            18.00    58.69340     Ni( 1.00)
+
+     Starting magnetic structure 
+     atomic species   magnetization
+        Ni           0.700
+
+     No symmetry found
+
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1           Ni  tau(   1) = (   0.0000000   0.0000000   0.0000000  )
+
+     number of k points=  1015  Marzari-Vanderbilt smearing, width (Ry)=  0.0100
+
+     Number of k-points >= 100: set verbosity='high' to print them.
+
+     Dense  grid:      813 G-vectors     FFT dimensions: (  15,  15,  15)
+
+     Estimated max dynamical RAM per process >       3.37 MB
+
+     Estimated total dynamical RAM >      79.80 MB
+     Generating pointlists ...
+     new r_m :   0.3642 (alat units)  0.8991 (a.u.) for type    1
+
+     Initial potential from superposition of free atoms
+
+     starting charge      17.9998, renormalised to      18.0000
+     Starting wfcs are   10 randomized atomic wfcs +    3 random wfcs
+
+     total cpu time spent up to now is        0.4 secs
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=    80.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.00E-02,  avg # of iterations =  4.5
+
+     total cpu time spent up to now is        2.3 secs
+
+     total energy              =    -320.21063511 Ry
+     estimated scf accuracy    <       8.37361252 Ry
+
+     total magnetization       =    -0.00 Bohr mag/cell
+     absolute magnetization    =     0.10 Bohr mag/cell
+
+     iteration #  2     ecut=    80.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.00E-02,  avg # of iterations =  1.0
+
+     total cpu time spent up to now is        3.2 secs
+
+     total energy              =    -320.53371236 Ry
+     estimated scf accuracy    <       0.77165939 Ry
+
+     total magnetization       =    -0.00 Bohr mag/cell
+     absolute magnetization    =     0.02 Bohr mag/cell
+
+     iteration #  3     ecut=    80.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  4.29E-03,  avg # of iterations =  1.0
+
+     total cpu time spent up to now is        4.1 secs
+
+     total energy              =    -320.54289703 Ry
+     estimated scf accuracy    <       0.00062432 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     0.00 Bohr mag/cell
+
+     iteration #  4     ecut=    80.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  3.47E-06,  avg # of iterations =  2.3
+
+     total cpu time spent up to now is        5.3 secs
+
+     total energy              =    -320.54293073 Ry
+     estimated scf accuracy    <       0.00001886 Ry
+
+     total magnetization       =    -0.00 Bohr mag/cell
+     absolute magnetization    =     0.00 Bohr mag/cell
+
+     iteration #  5     ecut=    80.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.05E-07,  avg # of iterations =  1.4
+
+     total cpu time spent up to now is        6.3 secs
+
+     total energy              =    -320.54293181 Ry
+     estimated scf accuracy    <       0.00000030 Ry
+
+     total magnetization       =    -0.00 Bohr mag/cell
+     absolute magnetization    =     0.00 Bohr mag/cell
+
+     iteration #  6     ecut=    80.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.68E-09,  avg # of iterations =  2.0
+
+     total cpu time spent up to now is        7.4 secs
+
+     total energy              =    -320.54293184 Ry
+     estimated scf accuracy    <       0.00000001 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     0.00 Bohr mag/cell
+
+     iteration #  7     ecut=    80.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  8.01E-11,  avg # of iterations =  1.0
+
+     Magnetic moment per site  (integrated on atomic sphere of radius R)
+     atom   1 (R=0.364)  charge= 13.4432  magn= -0.0000
+
+     total cpu time spent up to now is        8.3 secs
+
+     End of self-consistent calculation
+
+     Number of k-points >= 100: set verbosity='high' to print the bands.
+
+     the Fermi energy is   188.1134 ev
+
+!    total energy              =    -320.54293184 Ry
+     estimated scf accuracy    <          4.8E-10 Ry
+     smearing contrib. (-TS)   =       0.00000000 Ry
+     internal energy E=F+TS    =    -320.54293184 Ry
+
+     The total energy is F=E-TS. E is the sum of the following terms:
+     one-electron contribution =     174.46946348 Ry
+     hartree contribution      =      14.80303917 Ry
+     xc contribution           =     -51.07928967 Ry
+     ewald contribution        =    -458.73614482 Ry
+
+     total magnetization       =     0.00 Bohr mag/cell
+     absolute magnetization    =     0.00 Bohr mag/cell
+
+     convergence has been achieved in   7 iterations
+
+     Forces acting on atoms (cartesian axes, Ry/au):
+
+     atom    1 type  1   force =     0.00000000    0.00000000    0.00000000
+
+     Total force =     0.000000     Total SCF correction =     0.000000
+
+
+     Computing stress (Cartesian axis) and pressure
+
+          total   stress  (Ry/bohr**3)                   (kbar)     P=   447036.26
+   3.00172322  -0.15869957   0.17996675       441568.73   -23345.51    26474.02
+  -0.15869957   3.05964038   0.01700179       -23345.51   450088.64     2501.05
+   0.17996675   0.01700179   3.05530862        26474.02     2501.05   449451.41
+
+
+     Writing all to output data dir ./out/pwscf.save/
+
+     init_run     :      0.24s CPU      0.35s WALL (       1 calls)
+     electrons    :      5.62s CPU      7.88s WALL (       1 calls)
+     forces       :      0.05s CPU      0.08s WALL (       1 calls)
+     stress       :      0.09s CPU      0.11s WALL (       1 calls)
+
+     Called by init_run:
+     wfcinit      :      0.22s CPU      0.32s WALL (       1 calls)
+     potinit      :      0.00s CPU      0.01s WALL (       1 calls)
+     hinit0       :      0.02s CPU      0.02s WALL (       1 calls)
+
+     Called by electrons:
+     c_bands      :      5.02s CPU      7.03s WALL (       7 calls)
+     sum_band     :      0.59s CPU      0.84s WALL (       7 calls)
+     v_of_rho     :      0.01s CPU      0.01s WALL (       8 calls)
+     mix_rho      :      0.00s CPU      0.00s WALL (       7 calls)
+
+     Called by c_bands:
+     init_us_2    :      0.04s CPU      0.06s WALL (    8636 calls)
+     init_us_2:cp :      0.04s CPU      0.05s WALL (    8636 calls)
+     cegterg      :      4.71s CPU      6.47s WALL (    3556 calls)
+
+     Called by *egterg:
+     cdiaghg      :      1.21s CPU      1.60s WALL (   10389 calls)
+     h_psi        :      3.07s CPU      4.28s WALL (   10897 calls)
+     g_psi        :      0.01s CPU      0.01s WALL (    6833 calls)
+
+     Called by h_psi:
+     h_psi:calbec :      0.21s CPU      0.29s WALL (   10897 calls)
+     vloc_psi     :      2.74s CPU      3.82s WALL (   10897 calls)
+     add_vuspsi   :      0.09s CPU      0.13s WALL (   10897 calls)
+
+     General routines
+     calbec       :      0.25s CPU      0.36s WALL (   13437 calls)
+     fft          :      0.00s CPU      0.00s WALL (     192 calls)
+     ffts         :      0.00s CPU      0.00s WALL (      14 calls)
+     fftw         :      3.05s CPU      4.27s WALL (  270094 calls)
+
+     Parallel routines
+
+     PWSCF        :      6.31s CPU      9.29s WALL
+
+
+   This run was terminated on:  11:38:56  18Jun2023            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
