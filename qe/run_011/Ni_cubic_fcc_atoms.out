@@ -2,7 +2,7 @@ Ignoring PCI device with non-16bit domain.
 Pass --enable-32bits-pci-domain to configure to support such devices
 (warning: it would break the library ABI, don't enable unless really needed).
 
-     Program PWSCF v.7.1 starts on 27Jun2023 at 12: 2: 0 
+     Program PWSCF v.7.1 starts on 27Jun2023 at 12: 2:21 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -16,9 +16,9 @@ Pass --enable-32bits-pci-domain to configure to support such devices
      Parallel version (MPI), running on    24 processors
 
      MPI processes distributed on     1 nodes
-     12110 MiB available memory on the printing compute node when the environment starts
+     12112 MiB available memory on the printing compute node when the environment starts
 
-     Reading input from Ni_orthorhombic_baco_atoms.in
+     Reading input from Ni_cubic_fcc_atoms.in
 
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
      Error in routine  read_namelists (1):
@@ -27,10 +27,16 @@ Pass --enable-32bits-pci-domain to configure to support such devices
 
      stopping ...
 --------------------------------------------------------------------------
-MPI_ABORT was invoked on rank 18 in communicator MPI_COMM_WORLD
+MPI_ABORT was invoked on rank 0 in communicator MPI_COMM_WORLD
 with errorcode 1.
 
 NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
 You may or may not see output from other processes, depending on
 exactly when Open MPI kills them.
 --------------------------------------------------------------------------
+[s1083561:3164097] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 1741
+[s1083561:3164097] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 1741
+[s1083561:3164097] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 1741
+[s1083561:3164097] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 1741
+[s1083561:3164097] 4 more processes have sent help message help-mpi-api.txt / mpi-abort
+[s1083561:3164097] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages

@@ -18,7 +18,7 @@ for fileindex,sfile in enumerate(struct_files):
     qei.generate_kpoints(density=45,ishex=ishex)
     qei.kpoints_settings(qei.kpoints,qei.kpoints_shft)
     qei.default_settings(spin_polarized=True)
-    qei.ions['scf_must_converge'] = '.false.' # allow for wonky high forces at beginning of optimization
+    qei.electrons['scf_must_converge'] = '.false.' # allow for wonky high forces at beginning of optimization
     #qei.system['nosym']= '.false.' # turn symmetry back on to speed up! (you just wont print forces)
     dirname = 'run_%03d' % fileindex
     if not os.path.isdir(dirname):

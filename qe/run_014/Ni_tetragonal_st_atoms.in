@@ -24,12 +24,12 @@
 &ELECTRONS
   mixing_mode  =  "TF", 
   conv_thr  =  1.000000000000D-06, 
+  scf_must_converge  =  .false., 
 /
 
 &IONS
   ion_dynamics  =  "bfgs", 
   upscale  =  1000, 
-  scf_must_converge  =  .false., 
 /
 
 &CELL
