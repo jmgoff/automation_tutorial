@@ -5,6 +5,13 @@ from ase.io import iread,write
 #Ry/au * (au/AA) * (eV/Ry) = (eV/AA)
 ryperau_to_evperAA = rytoev*autoAA
 
+#def slines_to_data(lines):
+#    forces = []
+#    stresses = []
+#    for line in lines:
+#        l = line.split()
+
+
 def flines_to_forces(lines):
     forces = []
     for line in lines:
@@ -13,6 +20,25 @@ def flines_to_forces(lines):
         forces.append(f)
     return forces
 
+def parse_stresses(outfile,infile,trajectory_index=None):
+    try:
+        base_atoms = read(outfile)
+    except TypeError:
+        base_atoms = read(infile,format='espresso-in')
+    #NOTE this assumes that no extra force contributions are made (e.g through external packages like environ)
+    with open(outfile,'r') as readin:
+        lines = readin.readlines()
+        #flines = [line for line in lines if 'force' in line and 'cont' not in line and 'conv' not in line and 'corr' not in line and 'CPU' not in line and 'crit' not in line and 'Dyn' not in line]
+        flineinds = [lineid for lineid,line in enumerate(lines) if 'total   stress' in line]
+        fsteps = {flineind:lines[flineind +1: flineind+1+3] for flineind in flineinds }
+        fperstep = {flineind:flines_to_forces(fsteps[flineind]) for flineind in flineinds}
+        print(fperstep)
+
+    if trajectory_index != None:
+        forces = fperstep[flineinds[trajectory_index]]
+        return forces
+    else:
+        return list(fperstep.values())
 def parse_forces(outfile,infile,trajectory_index=None):
     try:
         base_atoms = read(outfile)

@@ -7,6 +7,7 @@ for directory in directories:
 
     #let pmg load the output
     vasprun = Vasprun('vasprun.xml')
+    band_gap = vasprun.get_band_structure().get_band_gap()
     # for a smaller object/quick look at the run
     # osz = Oszicar('OSZICAR')
     
@@ -14,3 +15,5 @@ for directory in directories:
     # you should see forces and stuff for your
     #  md or relaxation steps!
     print (vars(traj))
+    # you have access to other properties too such as band gap
+    band_gap = vasprun.get_band_structure().get_band_gap()

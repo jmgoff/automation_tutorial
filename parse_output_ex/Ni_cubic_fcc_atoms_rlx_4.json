@@ -1,0 +1,69 @@
+{
+  "Dataset": {
+    "AtomTypeStyle": "chemicalsymbol",
+    "Data": [
+      {
+        "AtomTypes": [
+          "Ni"
+        ],
+        "Energy": -4620.347513732231,
+        "Forces": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "Lattice": [
+          [
+            2.4305686379718163,
+            8.678506216998078e-08,
+            8.853134695754746e-07
+          ],
+          [
+            1.2152843943936604,
+            2.10493851675135,
+            2.0024065564098e-06
+          ],
+          [
+            1.2152850669778923,
+            0.7016476712330889,
+            1.984553133949369
+          ]
+        ],
+        "NumAtoms": 1,
+        "Positions": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "Stress": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      }
+    ],
+    "EnergyStyle": "electronvolt",
+    "ForceStyle": "electronvoltperangstrom",
+    "ForcesStyle": null,
+    "Label": "ASE generated",
+    "LatticeStyle": "angstrom",
+    "PositionsStyle": "angstrom",
+    "StressStyle": "kB"
+  }
+}

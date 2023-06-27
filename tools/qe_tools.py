@@ -92,7 +92,7 @@ class QEInput:
             freeze_arr = [1,1,1]
             if i in freeze_atom_inds:
                 freeze_arr = [0,0,0]
-            qe_pos_str = "  %s    %4.12f   %4.12f   %4.12f  %d   %d   %d" % ( (sym,) + tuple(list(posi)) + tuple(freeze_arr))
+            qe_pos_str = "  %s    %4.12f   %4.12f   %4.12f  %d   %d   %d \n" % ( (sym,) + tuple(list(posi)) + tuple(freeze_arr))
             pos_strs.append(qe_pos_str)
         self.position_strs = pos_strs
         

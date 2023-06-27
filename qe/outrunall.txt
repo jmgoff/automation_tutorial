@@ -1,0 +1,17 @@
+rm: cannot remove './*/out/*/*wfc*': No such file or directory
+rm: cannot remove './*/out/*/*upf': No such file or directory
+running Ni_triclinic_t_atoms.cif
+running Ni_tetragonal_ct_atoms.cif
+running Ni_cubic_diamond_atoms.cif
+running Ni_orthorhombic_baco_atoms.cif
+running Ni_orthorhombic_so_atoms.cif
+running Ni_cubic_bcc_atoms.cif
+running Ni_orthorhombic_boco_atoms.cif
+running Ni_monoclinic_bcm_atoms.cif
+running Ni_cubic_sc_atoms.cif
+running Ni_orthorhombic_fco_atoms.cif
+running Ni_monoclinic_sm_atoms.cif
+running Ni_cubic_fcc_atoms.cif
+running Ni_hexagonal_hcp_atoms.cif
+running Ni_hexagonal_h_atoms.cif
+running Ni_tetragonal_st_atoms.cif
