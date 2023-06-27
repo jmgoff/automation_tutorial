@@ -12,7 +12,7 @@
   ecutrho  =  4.800000000000D+02, 
   ibrav  =  0, 
   nosym  =  .true., 
-  nat  =  2, 
+  nat  =  1, 
   ntyp  =  1, 
   nspin  =  2, 
   occupations  =  "smearing", 
@@ -29,6 +29,7 @@
 &IONS
   ion_dynamics  =  "bfgs", 
   upscale  =  1000, 
+  scf_must_converge  =  .false., 
 /
 
 &CELL
@@ -41,13 +42,12 @@ ATOMIC_SPECIES
 
 ATOMIC_POSITIONS crystal
   Ni    0.000000000000   0.000000000000   0.000000000000  1   1   1 
-  Ni    0.000000000000   0.000000000000   0.500000000000  1   1   1 
 
 
 CELL_PARAMETERS bohr
   4.214334618957  0.000000000000  0.000000000000
   0.759965032443  4.145246606657  0.000000000000
-  -3.686134415888  -3.071776380589  13.183269080047
+  -1.843067207944  -1.535888190294  6.591634540023
 
 K_POINTS automatic 
-  10  10  3    0  0  0
+  10  10  6    0  0  0
