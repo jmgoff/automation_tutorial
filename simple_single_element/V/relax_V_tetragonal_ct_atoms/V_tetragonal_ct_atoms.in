@@ -1,0 +1,53 @@
+&CONTROL
+  calculation  =  "vc-relax", 
+  etot_conv_thr  =  1.000000000000D-05, 
+  forc_conv_thr  =  1.000000000000D-04, 
+  tprnfor  =  .true., 
+  outdir  =  "./out", 
+  tstress  =  .true., 
+/
+
+&SYSTEM
+  ecutwfc  =  8.000000000000D+01, 
+  ecutrho  =  3.200000000000D+02, 
+  ibrav  =  0, 
+  nosym  =  .true., 
+  nat  =  1, 
+  ntyp  =  1, 
+  nspin  =  2, 
+  occupations  =  "smearing", 
+  smearing  =  "mv", 
+  degauss  =  1.000000000000D-02, 
+  starting_magnetization(1)  =  2.500000000000D+00, 
+/
+
+&ELECTRONS
+  mixing_mode  =  "TF", 
+  conv_thr  =  1.000000000000D-06, 
+  scf_must_converge  =  .true., 
+/
+
+&IONS
+  ion_dynamics  =  "bfgs", 
+  upscale  =  1000, 
+/
+
+&CELL
+  cell_dofree  =  "all", 
+  cell_dynamics  =  "bfgs", 
+/
+
+ATOMIC_SPECIES
+  V  50.941500000000  V.upf
+
+ATOMIC_POSITIONS crystal
+  V    0.000000000000   0.000000000000   0.000000000000  1   1   1 
+
+
+CELL_PARAMETERS bohr
+  5.509458325244  0.000000000000  0.000000000000
+  -0.324087062117  5.499918055186  0.000000000000
+  -2.592644956313  -2.749915884965  4.008776096730
+
+K_POINTS automatic 
+  8  8  8    0  0  0

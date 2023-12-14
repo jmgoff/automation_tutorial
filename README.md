@@ -1,106 +1,41 @@
-# For all examples:
+# Our training data and methods
 
-It is highly recommended to run this in a virtual environment.
-(Though it is not completely necessary.)
+## Contents
 
-You can do so after you have installed anaconda:
+### Code and pseudopotentials
 
-conda create -n autotutorial python=3.10
+<b>tools</b>: `automation/tools` Scripts, functions, and methods for setting up 
+and running QE DFT calculations for interatomic potentials. Tools are also
+provided that convert QE outputs into data structures required by FitSNAP
 
-conda activate autotutorial
+The scripts and tools in `automation` generate QE input files based on
+certain defaults and environment variables. (defaults have been tested).
+Firstly, itis assumed that the PseudoDojo pseudopotential library is used. 
+This library needs to be uncompressed from `automation/qe_pseudos.zip` 
+and an environment variable needs to be set to:
+`export ESPRESSO_PSEUDO=/path/to/automation/qe_pseudos`
+for QE to run the scripts within.
 
+To use the tools, just add the folder to your pythonpath
 
-After an environment is chosen (base or the one above),
-you must set some tutorial paths and variables.
+`export PYTHONPATH=$PYTHONPATH:/path/to/automation/tools`
 
+### Structures
 
-export TUTORIAL_PATH=/path/to/automation
+<b>Single element structures</b> structures for the single element components
+can be found in `simple_single_element`. 
 
-- linux:
+<b>Other alloy structures</b> more alloy structures may be found in
+`composition_sampling_bcc`. These are small and should run quickly. They
+are made using symmetry arguments
 
-export PYTHONPATH=$PYTHONPATH:$TUTORIAL_PATH/tools
+# TO ADD and train on in the next iteration of the potential
 
-- max/ios:
+<b>High temperature trajectory from AIMD or with single SCF DFT ran on high temp 
+trajectory from a classical potential</b>
 
-export PYTHONPATH="${PYTHONPATH}:$TUTORIAL_PATH/tools"
+<b>Genetic algorithm structures with ditstorted lattice positions</b>
 
+<b>Defect structures</b>
 
-
-# For VASP examples:
-install required packages:
-
-pip install ase
-pip install pymatgen
-
-You will need to set your pymatgen vasp pseudopotential
-directory. You may do so by makeing a file in your home's
-config folder.
-Check first to make sure you have a config folder:
-
-ls ~/.config
-
-If nothing shows up, then run
-
-mkdir ~/.config
-
-Once this folder is made, you may open up a pmgrc.yaml file
-there:
-
-vi ~/.config/.pmgrc.yaml
-
-enter this into the first line, replacing /path/to/ with 
-your own path to our automation tutorial folder. Do NOT
-enter the variable for the tutorial path here.
-
-PMG_VASP_PSP_DIR: /path/to/automation/POT_PAW_PBE_52
-
-IMPORTANT NOTE: you will have to ask james for this folder
-because he cannot post it on github! Shoot him an 
-email in advance if at all possible to request.
-
-# for QE examples
-Install QE v. 7.0 or later. See james for help if stuck!
-You only need to do these steps if you have QE installed
-and/or want to run QE DFT calculations.
-
-First, add quantum espresso executables to your path
-
-- linux
-
-export PATH=$PATH:/path/to/qe-7.1/bin
-
-- mac/ios
-
-export PATH="${PATH}:/path/to/qe-7.1/bin"
-
-Second, set the variable: $ESPRESSO_PSEUDO
-
-- linux
-
-export ESPRESSO_PSEUDO=$TUTORIAL_PATH/qe_pseudos
-
-- mac/ios
-
-export ESPRESSO_PSEUDO="$TUTORIAL_PATH/qe_pseudos"
-
-# For FitSNAP examples
-! IF FitSNAP is not already installed, get an installation
-This requires the use of conda for these examples.
-
-Step 0: Install anaconda if you have not already.
-
-Step 1: install dependencies (lammps first)
-
-conda install lammps
-
-pip install numpy scipy scikit-learn virtualenv psutil pandas tabulate mpi4py Cython
-
-Step 2: download FitSNAP somewhere convenient
-
-git clone https://github.com/FitSNAP/FitSNAP.git
-
-Step 3: Set the required environmental variables
-
-FITSNAP_DIR=\path\to\FitSNAP
-
-export PYTHONPATH=$FITSNAP_DIR:$LAMMPS_DIR/python:$PYTHONPATH
+... and others recommened/required following first tests.
