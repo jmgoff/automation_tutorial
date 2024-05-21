@@ -3,7 +3,7 @@ import sys
 # inputs from the 'args' are provided when the code is called
 #  python example_function2.py <number1> <number2>
 #  filling in the input with specific values:
-#  python example_function 1 7
+#  python example_function.py 1 7
 
 number1 = sys.argv[1]
 number2 = sys.argv[2]
