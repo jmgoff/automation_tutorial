@@ -1,5 +1,14 @@
+# ignoring wave function files and other QE outputs
+*wfc*
+*mix*
+charges.dat
+# ignore pw out directories
+out
+pwscf.save
 # temporary files
 *.swp
 
+*.npy
+*.pickle
 # cached files
 __pycache__
