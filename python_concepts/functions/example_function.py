@@ -9,6 +9,3 @@ number2 = 7
 result = add_numbers(number1,number2)
 print (result)
 
-
-
-
